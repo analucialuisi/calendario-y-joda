@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7efe8" />
+  <title>Planes con amigas 💌</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">agenda compartida ✨</p>
+        <h1>Planes con amigas</h1>
+        <p class="subtitle">Para no volver a perder ese “tenemos que hacer esto”.</p>
+      </div>
+      <div class="hero-badge">💖</div>
+    </header>
+
+    <section class="toolbar card">
+      <button id="prevMonth" class="icon-button" aria-label="Mes anterior">←</button>
+      <div class="month-title-wrap">
+        <p class="tiny-label">Calendario</p>
+        <h2 id="monthTitle">Mes</h2>
+      </div>
+      <button id="nextMonth" class="icon-button" aria-label="Mes siguiente">→</button>
+    </section>
+
+    <section class="calendar card">
+      <div class="weekday">Lun</div>
+      <div class="weekday">Mar</div>
+      <div class="weekday">Mié</div>
+      <div class="weekday">Jue</div>
+      <div class="weekday">Vie</div>
+      <div class="weekday">Sáb</div>
+      <div class="weekday">Dom</div>
+      <div id="calendarGrid" class="calendar-grid"></div>
+    </section>
+
+    <section class="plans-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">lo que viene</p>
+          <h2>Próximos planes</h2>
+        </div>
+        <span id="planCount" class="count-pill">0</span>
+      </div>
+      <div id="upcomingPlans" class="plans-grid"></div>
+    </section>
+
+    <section class="legend card">
+      <div><span class="dot confirmed"></span> Confirmado</div>
+      <div><span class="dot idea"></span> Idea</div>
+      <div><span class="dot done"></span> Hecho</div>
+    </section>
+  </main>
+
+  <template id="planTemplate">
+    <article class="plan-card">
+      <div class="plan-topline">
+        <span class="plan-date"></span>
+        <span class="status-pill"></span>
+      </div>
+      <h3 class="plan-title"></h3>
+      <p class="plan-meta plan-time"></p>
+      <p class="plan-meta plan-location"></p>
+      <p class="plan-notes"></p>
+      <a class="map-link" target="_blank" rel="noopener noreferrer">Ver ubicación ↗</a>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
